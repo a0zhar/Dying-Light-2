@@ -1,0 +1,1112 @@
+{
+  "version": 1,
+  "symbol_uuid": "{09cb1ea0-1ed5-43fb-a295-3a855e1e512c}",
+  "symbol_size": "1920.000000 1080.000000",
+  "data_context_class": "MenuHintsController",
+  "class": "gui::ISymbolRoot",
+  "uuid": "{09cb1ea0-1ed5-43fb-a295-3a855e1e512c}",
+  "Id": "MenuHints",
+  "components": [
+    {
+      "class": "gui::IElementComponent",
+      "uuid": "{2cdbfa19-e572-4224-9400-bfe1af4cb9a1}"
+    },
+    {
+      "class": "gui::ILayoutComponent",
+      "uuid": "{b9e50120-03c3-4146-a383-e1d17409445a}",
+      "Height": "1080.000000",
+      "Width": "1920.000000"
+    },
+    {
+      "class": "gui::IResolutionScalerComponent",
+      "uuid": "{0868fdd3-ac3b-42f8-97df-127511cee143}"
+    },
+    {
+      "class": "gui::CScreenComponent",
+      "uuid": "{606f89e0-6cb6-4a30-ade6-de3a8d1f698f}",
+      "HideScreenSound": "hud_hintsmenu_out",
+      "ShowScreenSound": "hud_hintsmenu_in",
+      "DependencyScreen0": "MenuPlayerTabs",
+      "UsePadCursor": "1",
+      "DataClassName": "MenuHintsController"
+    },
+    {
+      "class": "gui::ILogicComponent",
+      "uuid": "{83307eda-cc96-45e4-998e-39c4cff7e913}",
+      "data": [
+        {
+          "type": "CVariablesComponentSymbolData"
+        },
+        {
+          "type": "CActionGraphSymbolData",
+          "uuid": "{c1800413-439d-4243-a4fc-5aa69e3f6664}",
+          "hash": "",
+          "nodes": [
+            {
+              "type": "CActionOnButtonPress",
+              "id": 24,
+              "Next": 26,
+              "meta": {
+                "x": -720,
+                "y": 0
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/listbox/group/prev_btn",
+                "element_uuid": "{f59cac73-f62a-447c-9a4a-5acbc669ccdb}",
+                "component_class": "gui::IButtonComponent"
+              }
+            },
+            {
+              "type": "CActionOnButtonPress",
+              "id": 23,
+              "Next": 25,
+              "meta": {
+                "x": -705.1348266601562,
+                "y": -301.4062194824219
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/listbox/group/next_btn",
+                "element_uuid": "{4fb473a1-77ea-4db8-9c9d-e501e310dafb}",
+                "component_class": "gui::IButtonComponent"
+              }
+            },
+            {
+              "type": "CActionEmitGameDataEvent",
+              "id": 25,
+              "m_Text1": {
+                "value": "cat"
+              },
+              "m_Text2": {
+                "value": ""
+              },
+              "m_Int1": {
+                "value": "1"
+              },
+              "m_Float1": {
+                "value": "0.000000"
+              },
+              "m_Bool1": {
+                "value": "0"
+              },
+              "meta": {
+                "x": -525,
+                "y": -240
+              },
+              "field_path": {
+                "type": "DataContext",
+                "class": "MenuHintsController"
+              },
+              "msg_rtti": "GuiGenericEvent"
+            },
+            {
+              "type": "CActionSetString",
+              "id": 22,
+              "Value": {
+                "src_node": 20,
+                "src_prop": "Value",
+                "value": ""
+              },
+              "meta": {
+                "x": -360,
+                "y": -660
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/listbox/group/text",
+                "element_uuid": "{cdec9f76-929d-4f2a-941c-6e82887eb6ac}",
+                "component_class": "gui::ITextComponent",
+                "field": "TextValue"
+              }
+            },
+            {
+              "type": "CActionOnFieldChanged",
+              "id": 21,
+              "Next": 22,
+              "meta": {
+                "x": -628,
+                "y": -676
+              },
+              "field_path": {
+                "type": "DataContext",
+                "class": "MenuHintsController",
+                "field": "m_CurrCategory"
+              }
+            },
+            {
+              "type": "CActionGetString",
+              "id": 20,
+              "meta": {
+                "x": -628,
+                "y": -576
+              },
+              "field_path": {
+                "type": "DataContext",
+                "class": "MenuHintsController",
+                "field": "m_CurrCategory"
+              }
+            },
+            {
+              "type": "CActionSetRawPtr",
+              "id": 19,
+              "Value": {
+                "src_node": 17,
+                "src_prop": "m_DataContext",
+                "value": ""
+              },
+              "meta": {
+                "x": 1035,
+                "y": -405
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/menu_hints_bighint_symbol",
+                "element_uuid": "{edf9cd3f-08da-4562-a38a-a2aedc381735}",
+                "component_class": "gui::IElementComponent",
+                "field": "DataContext"
+              },
+              "ptr_class": "gui::CDataSource"
+            },
+            {
+              "type": "CActionSetRawPtr",
+              "id": 18,
+              "Next": 19,
+              "Value": {
+                "src_node": 17,
+                "src_prop": "m_DataContext",
+                "value": ""
+              },
+              "meta": {
+                "x": 1050,
+                "y": -600
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/popup_group/hint_info_popup",
+                "element_uuid": "{653c9b5e-ceb3-41bc-a32a-bb52a51eb667}",
+                "component_class": "gui::IElementComponent",
+                "field": "DataContext"
+              },
+              "ptr_class": "gui::CDataSource"
+            },
+            {
+              "type": "CActionGameDataEvent",
+              "id": 17,
+              "Next": 18,
+              "meta": {
+                "x": 629.6273193359375,
+                "y": -594.9916381835938
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": ".",
+                "element_uuid": "{09cb1ea0-1ed5-43fb-a295-3a855e1e512c}",
+                "component_class": "gui::CScreenComponent"
+              },
+              "msg_rtti": "gui::CHoverChangedEvent"
+            },
+            {
+              "type": "CActionSetFloat",
+              "id": 16,
+              "Value": {
+                "src_node": 13,
+                "src_prop": "Result",
+                "value": "0.000000"
+              },
+              "meta": {
+                "x": 1875.95361328125,
+                "y": -1152.1966552734375
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/listbox/gradient",
+                "element_uuid": "{1a035092-4bf6-45b6-bb18-b589f89d0b6d}",
+                "component_class": "gui::ILayoutComponent",
+                "field": "MarginBottom"
+              }
+            },
+            {
+              "type": "CActionSetFloat",
+              "id": 15,
+              "Value": {
+                "src_node": 14,
+                "src_prop": "Result",
+                "value": "0.000000"
+              },
+              "Next": 16,
+              "meta": {
+                "x": 1740,
+                "y": -1350
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/listbox/top_gradient",
+                "element_uuid": "{feed0c5b-0121-44d8-b113-1d793cb8763d}",
+                "component_class": "gui::ILayoutComponent",
+                "field": "MarginTop"
+              }
+            },
+            {
+              "type": "CActionDivideFloat",
+              "id": 9,
+              "Value1": {
+                "src_node": 1,
+                "src_prop": "Value",
+                "value": "0.000000"
+              },
+              "Value2": {
+                "src_node": 8,
+                "src_prop": "Result",
+                "value": "0.000000"
+              },
+              "AllowZeroDivision": {
+                "value": "0"
+              },
+              "meta": {
+                "x": 689.0028076171875,
+                "y": -1138.02978515625
+              }
+            },
+            {
+              "type": "CActionSubtractFloat",
+              "id": 8,
+              "Value1": {
+                "src_node": 6,
+                "src_prop": "Value",
+                "value": "0.000000"
+              },
+              "Value2": {
+                "src_node": 4,
+                "src_prop": "Value",
+                "value": "0.000000"
+              },
+              "meta": {
+                "x": 429.2351379394531,
+                "y": -957.4293823242188
+              }
+            },
+            {
+              "type": "CActionOnFieldChanged",
+              "id": 7,
+              "Next": 15,
+              "meta": {
+                "x": 75,
+                "y": -1200
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/quest_scrolbar",
+                "element_uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+                "component_class": "gui::IScrollBarComponent",
+                "field": "DocumentSize"
+              }
+            },
+            {
+              "type": "CActionGetFloat",
+              "id": 6,
+              "meta": {
+                "x": 76,
+                "y": -1087
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/quest_scrolbar",
+                "element_uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+                "component_class": "gui::IScrollBarComponent",
+                "field": "DocumentSize"
+              }
+            },
+            {
+              "type": "CActionOnFieldChanged",
+              "id": 5,
+              "Next": 15,
+              "meta": {
+                "x": 67,
+                "y": -925
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/quest_scrolbar",
+                "element_uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+                "component_class": "gui::IScrollBarComponent",
+                "field": "ViewportSize"
+              }
+            },
+            {
+              "type": "CActionGetFloat",
+              "id": 4,
+              "meta": {
+                "x": 67,
+                "y": -825
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/quest_scrolbar",
+                "element_uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+                "component_class": "gui::IScrollBarComponent",
+                "field": "ViewportSize"
+              }
+            },
+            {
+              "type": "CActionOnFieldChanged",
+              "id": 3,
+              "Next": 15,
+              "meta": {
+                "x": 96,
+                "y": -1481
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/quest_scrolbar",
+                "element_uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+                "component_class": "gui::IScrollBarComponent",
+                "field": "Value"
+              }
+            },
+            {
+              "type": "CActionGetFloat",
+              "id": 1,
+              "meta": {
+                "x": 96,
+                "y": -1381
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "screen/quest_scrolbar",
+                "element_uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+                "component_class": "gui::IScrollBarComponent",
+                "field": "Value"
+              }
+            },
+            {
+              "type": "CActionEmitGameDataEvent",
+              "id": 2,
+              "meta": {
+                "x": 1650,
+                "y": -1755
+              },
+              "field_path": {
+                "type": "DataContext",
+                "class": "MenuHintsController"
+              },
+              "msg_rtti": "gui::CBackButtonAction"
+            },
+            {
+              "type": "CActionOnButtonPress",
+              "id": 11,
+              "Next": 2,
+              "meta": {
+                "x": 1470,
+                "y": -1800
+              },
+              "field_path": {
+                "type": "GuiComponent",
+                "element": "default_buttons/group1/btn_back",
+                "element_uuid": "{6bf5c557-39a0-4ae1-8647-b56b4f99c895}",
+                "component_class": "gui::IButtonComponent"
+              }
+            },
+            {
+              "type": "CActionCompareFloat",
+              "id": 10,
+              "Value1": {
+                "src_node": 9,
+                "src_prop": "Result",
+                "value": "0.000000"
+              },
+              "Value2": {
+                "value": "0.000100"
+              },
+              "Comparator": {
+                "value": "Greater"
+              },
+              "meta": {
+                "x": 1072.937744140625,
+                "y": -1194.0185546875
+              }
+            },
+            {
+              "type": "CActionCompareFloat",
+              "id": 12,
+              "Value1": {
+                "src_node": 9,
+                "src_prop": "Result",
+                "value": "0.000000"
+              },
+              "Value2": {
+                "value": "0.999990"
+              },
+              "Comparator": {
+                "value": "Less"
+              },
+              "meta": {
+                "x": 1102.937744140625,
+                "y": -1059.0185546875
+              }
+            },
+            {
+              "type": "CActionSelectUsingBool",
+              "id": 13,
+              "wc_spec_type": [
+                {
+                  "wc_id": 0,
+                  "wc_type_vec": "Float",
+                  "wc_type_nvec": "FloatVector"
+                }
+              ],
+              "Selector": {
+                "src_node": 12,
+                "src_prop": "Result",
+                "value": "0"
+              },
+              "Value on True": {
+                "value": "0.000000"
+              },
+              "Value on False": {
+                "value": "-110.000000"
+              },
+              "meta": {
+                "x": 1537.937744140625,
+                "y": -1104.0185546875
+              }
+            },
+            {
+              "type": "CActionSelectUsingBool",
+              "id": 14,
+              "wc_spec_type": [
+                {
+                  "wc_id": 0,
+                  "wc_type_vec": "Float",
+                  "wc_type_nvec": "FloatVector"
+                }
+              ],
+              "Selector": {
+                "src_node": 10,
+                "src_prop": "Result",
+                "value": "0"
+              },
+              "Value on True": {
+                "value": "10.000000"
+              },
+              "Value on False": {
+                "value": "-22.000000"
+              },
+              "meta": {
+                "x": 1470,
+                "y": -1230
+              }
+            },
+            {
+              "type": "CActionEmitGameDataEvent",
+              "id": 26,
+              "m_Text1": {
+                "value": "cat"
+              },
+              "m_Text2": {
+                "value": ""
+              },
+              "m_Int1": {
+                "value": "-1"
+              },
+              "m_Float1": {
+                "value": "0.000000"
+              },
+              "m_Bool1": {
+                "value": "0"
+              },
+              "meta": {
+                "x": -540,
+                "y": 60
+              },
+              "field_path": {
+                "type": "DataContext",
+                "class": "MenuHintsController"
+              },
+              "msg_rtti": "GuiGenericEvent"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "objects": [
+    {
+      "class": "gui::IGroup",
+      "uuid": "{e47cdb6a-7a5b-4cf2-a41a-af0bc45e93f7}",
+      "Id": "screen",
+      "components": [
+        {
+          "class": "gui::IElementComponent",
+          "uuid": "{769d9067-64d2-4981-9856-aa6d8695381c}"
+        },
+        {
+          "class": "gui::ILayoutComponent",
+          "uuid": "{bb5e2099-dd81-4352-954c-00f7fff8e33e}",
+          "Height": "1080.000000",
+          "Width": "1920.000000"
+        },
+        {
+          "class": "gui::CCursorParalaxComponent",
+          "uuid": "{1565b28f-b5e9-46df-aace-b707fcfcec41}",
+          "Power": "-0.080000 -0.080000"
+        }
+      ],
+      "objects": [
+        {
+          "class": "gui::IGroup",
+          "uuid": "{38994346-1875-41b5-ad82-c644973cb51d}",
+          "Id": "popup_group",
+          "components": [
+            {
+              "class": "gui::IElementComponent",
+              "uuid": "{5a900e33-8d82-45f8-970a-923322d294c6}",
+              "RenderRotation": "0.000000 0.000000 0.000000 -1.000000"
+            },
+            {
+              "class": "gui::ILayoutComponent",
+              "uuid": "{46d69aa5-745f-4366-ab94-7c4ff8a0a078}",
+              "Height": "1017.007385",
+              "Width": "1920.000000",
+              "MarginTop": "31.000000"
+            }
+          ],
+          "objects": [
+            {
+              "class": "gui::CSymbolRoot",
+              "uuid": "{653c9b5e-ceb3-41bc-a32a-bb52a51eb667}",
+              "Id": "hint_info_popup",
+              "sub_symbol": "hint_info_popup",
+              "components": [
+                {
+                  "target_component_uuid": "{8a298ffa-7749-4a88-91e1-905a733dfe7e}",
+                  "class": "gui::ILayoutComponent",
+                  "Height": "318.112000",
+                  "MarginTop": "188.000000",
+                  "MarginLeft": "647.000000"
+                },
+                {
+                  "target_component_uuid": "{b24d0755-3473-4329-bb5e-a8aad555dab3}",
+                  "class": "gui::CHintPositionComponent",
+                  "UseFixedPos": "1",
+                  "FixedScreenPos": "632.000000 188.000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "gui::IGroup",
+          "uuid": "{b4421dfa-ba7c-4954-ae8c-2223a1199b48}",
+          "Id": "listbox",
+          "components": [
+            {
+              "class": "gui::IElementComponent",
+              "uuid": "{a9096745-cc75-4be4-b296-9e5424878b77}",
+              "RenderRotation": "0.000000 0.061049 0.000000 0.998135"
+            },
+            {
+              "class": "gui::ILayoutComponent",
+              "uuid": "{a405a769-a15d-4e20-99b8-8d10816b79d8}",
+              "Height": "632.965454",
+              "Width": "538.927734",
+              "MarginTop": "249.989929",
+              "MarginLeft": "48.000000"
+            },
+            {
+              "class": "gui::IListboxComponent",
+              "uuid": "{e76019e3-7fda-4b62-82b5-689e72c6f8f3}",
+              "m_Symbols": [
+                {
+                  "class": "gui::CElementTypePool",
+                  "m_DataClass": "GuiHintCategoryInfoFata",
+                  "m_SymbolName": "hint_info_cat"
+                }
+              ],
+              "DefaultSymbol": "hint_info_symbol",
+              "ItemSpacing": "4.000000",
+              "ScrollPerPixel": "1",
+              "FieldPath": "m_Hints",
+              "m_WheelReceiver": "{b4421dfa-ba7c-4954-ae8c-2223a1199b48};gui::IMouseReceiverComponent;0;.",
+              "RightStickScroll": "1",
+              "m_Viewport": "{fcb4bb8e-a42e-4fcd-8b13-a53b03b033df};gui::ILayoutComponent;0;viewport",
+              "m_ContentArea": "{a4bda753-c779-4850-846d-32cfb6c7010d};gui::ILayoutComponent;0;viewport/content",
+              "m_VerticalScrollBar": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa};gui::IScrollBarComponent;0;../quest_scrolbar"
+            },
+            {
+              "class": "gui::IMouseReceiverComponent",
+              "uuid": "{555da473-519f-484f-a7ac-e34790113699}"
+            }
+          ],
+          "objects": [
+            {
+              "class": "gui::IGroup",
+              "uuid": "{5bdba346-ec7c-46d9-a5f4-c7ba393aec48}",
+              "Id": "group",
+              "components": [
+                {
+                  "class": "gui::IElementComponent",
+                  "uuid": "{36e801a0-1c1f-4e60-bb74-844eacfac165}",
+                  "RenderRotation": "0.000000 -0.017452 0.000000 0.999848"
+                },
+                {
+                  "class": "gui::ILayoutComponent",
+                  "uuid": "{091e2e5e-c1e5-4e5a-a5d5-805bfaec0407}",
+                  "Height": "45.340691",
+                  "Width": "525.826050",
+                  "MarginUp": "-8.732218",
+                  "MarginTop": "-64.239487",
+                  "MarginLeft": "0.590060"
+                }
+              ],
+              "objects": [
+                {
+                  "class": "gui::CSymbolRoot",
+                  "uuid": "{f59cac73-f62a-447c-9a4a-5acbc669ccdb}",
+                  "Id": "prev_btn",
+                  "sub_symbol": "next_prev_tab_btn_1",
+                  "components": [
+                    {
+                      "target_component_uuid": "{56399c36-dbb8-4c33-85e7-02b6e1dcbaac}",
+                      "class": "gui::ILayoutComponent",
+                      "MarginAnchorX": "Right"
+                    },
+                    {
+                      "target_component_uuid": "{84712020-837a-412b-b7c7-00d4169d3acc}",
+                      "class": "gui::IButtonComponent",
+                      "UnfocusedPress": "1",
+                      "PressAction": "_ACTION_GUI_PAD_RT"
+                    }
+                  ]
+                },
+                {
+                  "class": "gui::IGroup",
+                  "uuid": "{7082c517-b187-4297-b5ba-ee5c864e6f7d}",
+                  "Id": "citybar_main_title_line",
+                  "components": [
+                    {
+                      "class": "gui::IElementComponent",
+                      "uuid": "{55a3726c-099d-4e6f-99f6-fc839b816c3e}"
+                    },
+                    {
+                      "class": "gui::ILayoutComponent",
+                      "uuid": "{16b0e090-fd16-491f-9cf4-0eb5890623a9}",
+                      "Height": "13.000000",
+                      "Width": "517.000000",
+                      "MarginTop": "31.507080",
+                      "MarginLeft": "7.500793"
+                    },
+                    {
+                      "class": "gui::IImageComponent",
+                      "uuid": "{deba45a3-656f-4044-80bd-8f8026a8a95f}",
+                      "Texture": "citybar_main_title_line"
+                    }
+                  ]
+                },
+                {
+                  "class": "gui::CSymbolRoot",
+                  "uuid": "{4fb473a1-77ea-4db8-9c9d-e501e310dafb}",
+                  "Id": "next_btn",
+                  "sub_symbol": "next_prev_tab_btn_1",
+                  "components": [
+                    {
+                      "target_component_uuid": "{84712020-837a-412b-b7c7-00d4169d3acc}",
+                      "class": "gui::IButtonComponent",
+                      "UnfocusedPress": "1",
+                      "PressAction": "_ACTION_GUI_PAD_LT"
+                    }
+                  ]
+                },
+                {
+                  "class": "gui::IGroup",
+                  "uuid": "{cdec9f76-929d-4f2a-941c-6e82887eb6ac}",
+                  "Id": "text",
+                  "components": [
+                    {
+                      "class": "gui::IElementComponent",
+                      "uuid": "{b24afc0b-a32b-4d6e-b662-ad75be104c8c}"
+                    },
+                    {
+                      "class": "gui::ILayoutComponent",
+                      "uuid": "{925b1007-d18a-4999-940c-ebac0c232256}",
+                      "MarginTop": "2.840652",
+                      "MarginAnchorX": "Center"
+                    },
+                    {
+                      "class": "gui::ITextComponent",
+                      "uuid": "{df634dbc-c103-4747-8474-1309b4cb8f73}",
+                      "_preset_": "H3",
+                      "AlignmentX": "Center",
+                      "OutlineColor": "0000000D",
+                      "OutlineSize": "1.000000",
+                      "Outline": "1",
+                      "ShadowOffset": "1.000000 1.000000",
+                      "DropShadow": "1",
+                      "TextColorMul": "m_golden",
+                      "Uppercase": "1",
+                      "Multiline": "0",
+                      "FontSize": "17.000000",
+                      "_StylePreset_": "H3",
+                      "TextValue": "Sample Text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "gui::IGroup",
+              "uuid": "{fcb4bb8e-a42e-4fcd-8b13-a53b03b033df}",
+              "Id": "viewport",
+              "components": [
+                {
+                  "class": "gui::IElementComponent",
+                  "uuid": "{65116032-ca83-4a8e-9820-585877c27bf5}"
+                },
+                {
+                  "class": "gui::ILayoutComponent",
+                  "uuid": "{56f97fa8-5a65-4b72-a090-2d7f36b848ae}",
+                  "Height": "700.955383",
+                  "Width": "538.927734",
+                  "SizeModeY": "Stretch",
+                  "SizeModeX": "Stretch",
+                  "MarginLeft": "12.030945"
+                },
+                {
+                  "class": "gui::IMaskComponent",
+                  "uuid": "{3d15d340-e524-4707-9855-8182e31cd03f}",
+                  "ClipEdge": "0",
+                  "MaskSource": "{1a035092-4bf6-45b6-bb18-b589f89d0b6d};screen/listbox/gradient;0",
+                  "MaskTexture": "test_grad_mask"
+                },
+                {
+                  "class": "gui::IMaskComponent",
+                  "uuid": "{7c6beb09-00dc-431b-a3ba-73b118b33f76}",
+                  "ClipEdge": "0",
+                  "MaskSource": "{feed0c5b-0121-44d8-b113-1d793cb8763d};screen/listbox/top_gradient;0",
+                  "MaskTexture": "test_grad_mask"
+                }
+              ],
+              "objects": [
+                {
+                  "class": "gui::IGroup",
+                  "uuid": "{a4bda753-c779-4850-846d-32cfb6c7010d}",
+                  "Id": "content",
+                  "components": [
+                    {
+                      "class": "gui::IElementComponent",
+                      "uuid": "{60537136-916e-439c-bf90-a526f70a893c}"
+                    },
+                    {
+                      "class": "gui::ILayoutComponent",
+                      "uuid": "{77f0147f-9cbe-454c-9ce6-5d53e51f56d0}",
+                      "Width": "539.992188",
+                      "SizeModeY": "AutoSizeToElements"
+                    }
+                  ],
+                  "objects": [
+                    {
+                      "class": "gui::CSymbolRoot",
+                      "uuid": "{554c67ce-a5fa-4216-b598-0364d828f19d}",
+                      "Id": "hint_info_symbol",
+                      "sub_symbol": "hint_info_symbol"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "class": "gui::IGroup",
+              "uuid": "{1a035092-4bf6-45b6-bb18-b589f89d0b6d}",
+              "Id": "gradient",
+              "components": [
+                {
+                  "class": "gui::IElementComponent",
+                  "uuid": "{0be0e00b-71e6-4aa5-ba47-5bb0d9eaa0ef}",
+                  "RenderPivot": "0.500000 0.500000 0.000000",
+                  "Visible": "0"
+                },
+                {
+                  "class": "gui::ILayoutComponent",
+                  "uuid": "{1dc680d8-dc59-4896-bfde-1e28171c3e18}",
+                  "LayoutRotation": "0.000000 0.000000 -0.707107 0.707107",
+                  "Height": "200.000000",
+                  "Width": "100.000000",
+                  "MarginAnchorY": "Bottom"
+                },
+                {
+                  "class": "gui::IImageComponent",
+                  "uuid": "{471d9e8c-7905-48dc-a0de-6e443f3c86e1}",
+                  "Texture": "test_grad_mask"
+                }
+              ]
+            },
+            {
+              "class": "gui::IGroup",
+              "uuid": "{feed0c5b-0121-44d8-b113-1d793cb8763d}",
+              "Id": "top_gradient",
+              "components": [
+                {
+                  "class": "gui::IElementComponent",
+                  "uuid": "{02fb567c-4b7e-4599-803f-157630c24d72}",
+                  "RenderPivot": "0.500000 0.500000 0.000000",
+                  "RenderRotation": "0.000000 0.000000 0.707107 0.707107",
+                  "Visible": "0"
+                },
+                {
+                  "class": "gui::ILayoutComponent",
+                  "uuid": "{f649dc6c-895d-4d71-9451-f1c630d0bcad}",
+                  "Height": "25.000000",
+                  "Width": "25.000000"
+                },
+                {
+                  "class": "gui::IImageComponent",
+                  "uuid": "{5d88b34a-f40e-42f3-a77e-51826bc8345a}",
+                  "Texture": "test_grad_mask"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "gui::CSymbolRoot",
+          "uuid": "{6e97d59a-7de8-46ee-88e5-cbbdcc667bfa}",
+          "Id": "quest_scrolbar",
+          "sub_symbol": "quest_scrolbar",
+          "components": [
+            {
+              "target_component_uuid": "{160dc6ce-892c-42ba-8965-fb43cf5d595d}",
+              "class": "gui::ILayoutComponent",
+              "Height": "625.075195",
+              "SizeModeY": "Stretch",
+              "MarginBottom": "194.972290",
+              "MarginTop": "259.952484",
+              "MarginLeft": "606.002136"
+            }
+          ]
+        },
+        {
+          "class": "gui::CSymbolRoot",
+          "uuid": "{edf9cd3f-08da-4562-a38a-a2aedc381735}",
+          "Id": "menu_hints_bighint_symbol",
+          "sub_symbol": "menu_hints_bighint_symbol",
+          "components": [
+            {
+              "target_component_uuid": "{32560bbb-8557-4fca-b959-4769bcbec821}",
+              "class": "gui::ILayoutComponent",
+              "MarginTop": "8.281738",
+              "MarginLeft": "601.610352"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "gui::IGroup",
+      "uuid": "{1f66293a-4452-4034-b73a-68d0532bb69b}",
+      "Id": "grid_shadow",
+      "components": [
+        {
+          "class": "gui::IElementComponent",
+          "uuid": "{fa68d873-f8f4-4330-b388-0ffb06e21766}"
+        },
+        {
+          "class": "gui::ILayoutComponent",
+          "uuid": "{940ec9c4-e394-4a61-b4ee-26abfa8df6da}",
+          "Height": "905.613098",
+          "Width": "726.743774",
+          "MarginTop": "108.021271",
+          "MarginLeft": "-35.909485"
+        },
+        {
+          "class": "gui::IImageComponent",
+          "uuid": "{ee165893-1384-4eb5-8a6e-8ba3ec27ffc9}",
+          "Texture": "grid_shadow"
+        }
+      ]
+    },
+    {
+      "class": "gui::IGroup",
+      "uuid": "{6be7c065-ce82-435b-9f29-cf0cf5c45846}",
+      "Id": "default_buttons",
+      "components": [
+        {
+          "class": "gui::IElementComponent",
+          "uuid": "{bc93d80d-1c97-45b1-9ed0-91a901da123e}"
+        },
+        {
+          "class": "gui::ILayoutComponent",
+          "uuid": "{3390bbc9-c2b1-4453-87b8-cebffeeddf08}",
+          "Height": "40.000000",
+          "Width": "1795.500000",
+          "MarginBottom": "44.000000",
+          "MarginLeft": "51.500000",
+          "MarginAnchorY": "Bottom"
+        }
+      ],
+      "objects": [
+        {
+          "class": "gui::IGroup",
+          "uuid": "{25182b3a-083a-4251-bcd1-d5b285af8f30}",
+          "Id": "group1",
+          "components": [
+            {
+              "class": "gui::IElementComponent",
+              "uuid": "{797627cf-7991-4966-87d5-bd9c07abd988}"
+            },
+            {
+              "class": "gui::ILayoutComponent",
+              "uuid": "{7dc6d569-1456-4a2f-8c9b-c0679cc3a9c8}",
+              "Height": "40.000000",
+              "Width": "123.664841",
+              "MarginLeft": "16.000000"
+            },
+            {
+              "class": "gui::IWrapPanelComponent",
+              "uuid": "{054c1b78-9a83-4a2b-911f-8d870d93bf07}",
+              "Wrap": "0"
+            }
+          ],
+          "objects": [
+            {
+              "class": "gui::CSymbolRoot",
+              "uuid": "{6bf5c557-39a0-4ae1-8647-b56b4f99c895}",
+              "Id": "btn_back",
+              "sub_symbol": "legend_button",
+              "components": [
+                {
+                  "target_component_uuid": "{0c9f72bc-a68f-445d-b86d-0f3cbc33b23c}",
+                  "class": "gui::ILayoutComponent",
+                  "Width": "101.589996"
+                },
+                {
+                  "target_component_uuid": "{1c2b8b2c-5e96-476d-8fa2-02fcd8c24729}",
+                  "class": "gui::ILogicComponent",
+                  "dyn_fields": [
+                    {
+                      "name": "button_icon",
+                      "type": "string",
+                      "value": "%KEY(_ACTION_GUI_CANCEL)"
+                    },
+                    {
+                      "name": "button_text",
+                      "type": "string",
+                      "value": "&MenuBack&"
+                    }
+                  ]
+                },
+                {
+                  "target_component_uuid": "{8c8a073d-8e44-4a43-98c0-d781154253ff}",
+                  "class": "gui::IButtonComponent",
+                  "PressSound": "menu_back",
+                  "DisableCanHover": "1",
+                  "PressAction": "_ACTION_GUI_CANCEL"
+                }
+              ]
+            },
+            {
+              "class": "gui::CSymbolRoot",
+              "uuid": "{7a9a57f3-1e34-4d8a-a902-def394a6677c}",
+              "Id": "btn_online",
+              "sub_symbol": "online_button",
+              "components": [
+                {
+                  "target_component_uuid": "{c61ed7fb-6335-4d86-b402-1e63fd43bd10}",
+                  "class": "gui::ILayoutComponent",
+                  "Width": "233.648712"
+                }
+              ]
+            },
+            {
+              "class": "gui::CSymbolRoot",
+              "uuid": "{0e5bd79c-2acf-47f8-a673-49be761ebe28}",
+              "Id": "callforhelp_symbol",
+              "sub_symbol": "callforhelp_symbol",
+              "components": [
+                {
+                  "target_component_uuid": "{54660936-0f66-46fb-ba3a-0d00e9fa4863}",
+                  "class": "gui::ILayoutComponent",
+                  "Width": "119.664841",
+                  "MarginLeft": "16.000000"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "class": "gui::IGroup",
+          "uuid": "{e9d5a5ae-a2dd-4523-9cfa-ff4ab7aad5a0}",
+          "Id": "group2",
+          "components": [
+            {
+              "class": "gui::IElementComponent",
+              "uuid": "{8a890112-e372-4cb3-a531-bccc128d8cd1}"
+            },
+            {
+              "class": "gui::ILayoutComponent",
+              "uuid": "{a5276a3e-66d7-495c-89bc-69fce0eeb205}",
+              "Height": "40.000000",
+              "Width": "119.664795",
+              "MarginLeft": "1675.835205"
+            },
+            {
+              "class": "gui::IWrapPanelComponent",
+              "uuid": "{52e1dffd-a097-4307-90dc-8d2ee9d44cfe}",
+              "AlignmentX": "Right",
+              "Wrap": "0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "class": "gui::IGroup",
+      "uuid": "{2ea6bd5c-acf1-4303-827b-d5fad3c07774}",
+      "Id": "hints_menu_template",
+      "design_time": true,
+      "components": [
+        {
+          "class": "gui::IElementComponent",
+          "uuid": "{7b8dd56e-e2c8-4203-8788-fc673a29cd98}",
+          "DesignTimeOnly": "1",
+          "Visible": "0"
+        },
+        {
+          "class": "gui::ILayoutComponent",
+          "uuid": "{4d8ccb60-97ce-4c38-9aba-eb04cd6537a6}",
+          "Height": "1080.000000",
+          "Width": "1920.000000"
+        },
+        {
+          "class": "gui::IImageComponent",
+          "uuid": "{6c0e09e3-9caa-4a77-a21b-eae20ff4ac52}",
+          "Texture": "hints_menu_template"
+        }
+      ]
+    },
+    {
+      "class": "gui::IGroup",
+      "uuid": "{f5c08774-aef3-4109-a7ae-bd0497c34ca7}",
+      "Id": "grid_menu_template",
+      "design_time": true,
+      "components": [
+        {
+          "class": "gui::IElementComponent",
+          "uuid": "{8a68dd4b-db75-4dff-87d5-29ee1ff53f93}",
+          "DesignTimeOnly": "1"
+        },
+        {
+          "class": "gui::ILayoutComponent",
+          "uuid": "{6ca38588-57fc-4bae-b011-79164321081d}",
+          "Height": "1080.000000",
+          "Width": "1920.000000"
+        },
+        {
+          "class": "gui::IImageComponent",
+          "uuid": "{cbcdfbf3-3a7c-463e-821a-37a499fa6842}",
+          "ImageColorMul": "FFFFFF32",
+          "Texture": "grid_menu_template"
+        }
+      ]
+    }
+  ]
+}
